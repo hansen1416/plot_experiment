@@ -59,3 +59,4 @@ if __name__ == "__main__":
     y_test_pred = lin_reg.predict(x_test)
 
     print(y_test_pred)
+    # [-5380.83891977   188.51132623    64.24455428]

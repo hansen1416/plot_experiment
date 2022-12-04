@@ -46,7 +46,7 @@ def simple_scatter_plot(data, figsize=(1, 1), s=0.2):
 
     img_buf = BytesIO()
 
-    plt.savefig(os.path.join('simpleplot', "simple_plot_{}_{}.png".format(str(figsize), str(s))), transparent=True, dpi=200,
+    plt.savefig(img_buf, transparent=True, dpi=200,
                 format='png')  # , pad_inches=0)
 
     plt.clf()
@@ -76,13 +76,13 @@ if __name__ == "__main__":
 
     data = random_data()
 
-    # simple_scatter_plot(data, figsize=(1, 1), s=0.1)
+    simple_scatter_plot(data, figsize=(1, 1), s=0.3)
 
-    # exit()
+    exit()
 
-    fig = list(range(1, 16))
-    s = [0.5, 2, 4.2, 8, 12, 18, 24, 32, 40, 50, 60, 72, 84, 96, 110]
+    # fig = list(range(1, 16))
+    # s = [0.5, 2, 4.2, 8, 12, 18, 24, 32, 40, 50, 60, 72, 84, 96, 110]
 
-    for i, f in enumerate(fig):
+    # for i, f in enumerate(fig):
 
-        simple_scatter_plot(data, figsize=(f, f), s=s[i])
+    #     simple_scatter_plot(data, figsize=(f, f), s=s[i])

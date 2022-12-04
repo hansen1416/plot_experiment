@@ -32,7 +32,7 @@ def plot_result(X, y, y_pred, poly_reg, lin_reg, degree):
 
 if __name__ == "__main__":
 
-    degree = 1
+    degree = 3
 
     poly_reg = PolynomialFeatures(degree=degree)
     X_poly = poly_reg.fit_transform(figsizes)
@@ -44,18 +44,18 @@ if __name__ == "__main__":
 
     plot_result(figsizes, marksizes, y_pred, poly_reg, lin_reg, degree)
 
-    # grid2D = {
-    #     "j0": 1751622.5000000084,
-    #     "k0": 5947162.5000000652,
-    #     "numJ": 273,
-    #     "numK": 189,
-    #     "deltaJ": 5.0,
-    #     "deltaK": 5.0
-    # }
+    grid2D = {
+        "j0": 1751622.5000000084,
+        "k0": 5947162.5000000652,
+        "numJ": 273,
+        "numK": 189,
+        "deltaJ": 5.0,
+        "deltaK": 5.0
+    }
 
-    # x_test = poly_reg.fit_transform(np.array([[grid2D['numJ']/i * grid2D['numK']/i]
-    #                                           for i in [5, 10, 20]]))
+    x_test = poly_reg.fit_transform(np.array([[grid2D['numJ']/i * grid2D['numK']/i]
+                                              for i in [5, 10, 20]]))
 
-    # y_test_pred = lin_reg.predict(x_test)
+    y_test_pred = lin_reg.predict(x_test)
 
-    # print(y_test_pred)
+    print(y_test_pred)
